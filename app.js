@@ -7,7 +7,7 @@ const bookroute=require("./routes/bookRoutes");
 
 
 mongoose.connect(process.env.MONGO_URI,{
-    useNewUrlParse:true,
+    useNewUrlParser:true,
     useUnifiedTopology:true,
     }).then(()=>console.log("connected to mongodbbbb"))
     .catch(err=>console.log(err));
@@ -15,9 +15,9 @@ mongoose.connect(process.env.MONGO_URI,{
     app.use(express.json());
 
 
-    app.use("/api/users",bookroute);
+    // app.use("/api/users",bookroute);
 
-    const PORT=process.env.PORT || 5000;
+    const PORT=process.env.PORT || 500;
 
     app.listen(PORT,()=>
     console.log(`server is listening on PORT ${PORT}`));
