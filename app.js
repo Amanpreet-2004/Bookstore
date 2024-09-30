@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO_URI,{
     app.use(express.json());
 
 
-    // app.use("/api/users",bookroute);
+    app.use("/api/",bookroute);
 
     const PORT=process.env.PORT || 500;
 
