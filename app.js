@@ -1,12 +1,12 @@
 const express=require("express");
 const app=express();
 const mongoose =require("mongoose");
-const dotenv=require("dotenv");
+const dotenv=require("dotenv");  
 dotenv.config();
 const bookroute=require("./routes/bookRoutes");
 
 
-mongoose.connect(process.env.MONGO_URL,{
+mongoose.connect(process.env.MONGO_URI,{
     useNewUrlParse:true,
     useUnifiedTopology:true,
     }).then(()=>console.log("connected to mongodbbbb"))
